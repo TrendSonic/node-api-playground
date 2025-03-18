@@ -11,6 +11,8 @@ const bootcamps = require("./routes/bootcampsRoutes");
 
 const app = express();
 
+app.use(express.json());
+
 // use morgan if in development mode
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
